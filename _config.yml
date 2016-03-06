@@ -1,11 +1,13 @@
-auto: true
 
-markdown: rdiscount
-pygments: true
-paginate: 8
+markdown: kramdown
+highlighter: pygments
+paginate: nil
 permalink: /:title
 
-title: BeiYuu.com
-url: http://beiyuu.com
+title: Guobin's Blog
+url: http://guobin1112.github.io
 feed: /atom.xml
-author_info: <a href="http://beiyuu.com/">BeiYuu</a>
+author_info: <a href="http://guobin1112.github.io/">Guobin's Blog</a>
+
+gems: [jekyll-paginate]
+
