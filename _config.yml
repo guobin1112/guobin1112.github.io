@@ -1,13 +1,37 @@
+# config for Guobin's Blog
+# author:guobin xu
+# modified from Kiko, github:https://github.com/gfjaru/Kiko/releases
 
-markdown: kramdown
-highlighter: pygments
-paginate: nil
-permalink: /:title
+# Basic
+name:               "Guobin"
 
-title: Guobin's Blog
-url: http://guobin1112.github.io
-feed: /atom.xml
-author_info: <a href="http://guobin1112.github.io/">Guobin's Blog</a>
+# URL
+baseurl:            "" #For Root Domain
+permalink:          /:year/:month/:day/:title.html
 
-gems: [jekyll-paginate]
+# Markdown
+markdown:           rdiscount
 
+# Navigation
+nav:
+  - name:           "About Me"
+    href:           "/about"
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"

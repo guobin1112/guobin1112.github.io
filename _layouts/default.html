@@ -1,42 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!--
-    * Author:         guobin_xu
-    -->
-    <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="author" content="guobin_xu" />
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="Guobin's Blog" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+  </head>
 <body>
-
-    <div class="home-menu">
-        <div class="home-icon-con">
-            <a class="home-menu-icon" href="/">guobin_xu</a>
-        </div>
-    </div>
-
+  <div class="container">
     {{ content }}
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-        })
-    </script>
+  </div>
 </body>
 </html>
